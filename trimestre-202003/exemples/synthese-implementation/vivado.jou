@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Sep  3 16:30:05 2020
+# Process ID: 1392
+# Current directory: C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/synthese-implementation
+# Command line: vivado.exe -mode tcl
+# Log file: C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/synthese-implementation/vivado.log
+# Journal file: C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/synthese-implementation\vivado.jou
+#-----------------------------------------------------------
+# lecture des fichiers
+remove_files [get_files]
+read_vhdl -vhdl2008 ../basys3_top_exemples.vhd
+read_xdc ../Basys-3-top.xdc
+set montic [clock format [clock seconds] -format %H:%M:%S]
+puts "Il est presentement : $montic"
+synth_design -top basys3_top_exemples -part xc7a35tcpg236-1 -assert
+--------------------------------------------------------------------------------------------------------
+# implémentation (placement et routage)
+set systemTime [clock seconds]
+puts "Il est presentement : [clock format $systemTime -format %H:%M:%S]"
+#opt_design
+place_design
+route_design
+# programmation du FPGA
+open_hw_manager
+connect_hw_server
+get_hw_targets
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {basys3-top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+disconnect_hw_server
+# génération du fichier de configuration
+puts "J'ai commence a $montic"
+set systemTime [clock seconds]
+puts "Il est presentement : [clock format $systemTime -format %H:%M:%S]"
+write_bitstream -force basys3-top.bit
+# programmation du FPGA
+open_hw_manager
+connect_hw_server
+get_hw_targets
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {basys3-top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+disconnect_hw_server

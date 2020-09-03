@@ -1,0 +1,775 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Sep  3 16:30:05 2020
+# Process ID: 1392
+# Current directory: C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/synthese-implementation
+# Command line: vivado.exe -mode tcl
+# Log file: C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/synthese-implementation/vivado.log
+# Journal file: C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/synthese-implementation\vivado.jou
+#-----------------------------------------------------------
+Vivado% Vivado% # lecture des fichiers
+Vivado% remove_files [get_files]
+ERROR: [Common 17-53] User Exception: No open project. Please create or open a project before executing this command.
+
+Vivado% read_vhdl -vhdl2008 ../basys3_top_exemples.vhd
+C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/basys3_top_exemples.vhd
+Vivado% read_xdc ../Basys-3-top.xdc
+C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc
+Vivado% set montic [clock format [clock seconds] -format %H:%M:%S]
+16:32:03
+Vivado% puts "Il est presentement : $montic"
+Il est presentement : 16:32:03
+Vivado% synth_design -top basys3_top_exemples -part xc7a35tcpg236-1 -assert
+Command: synth_design -top basys3_top_exemples -part xc7a35tcpg236-1 -assert
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12900
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'basys3_top_exemples' [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/basys3_top_exemples.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'basys3_top_exemples' (1#1) [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/basys3_top_exemples.vhd:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1016.410 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[7]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[7]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:271]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:271]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:272]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:272]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:273]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:273]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:274]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:274]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/basys3_top_exemples_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/basys3_top_exemples_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1016.410 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     1|
+|2     |LUT4  |     1|
+|3     |IBUF  |     4|
+|4     |OBUF  |     2|
+|5     |OBUFT |    14|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1016.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 1016.410 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1016.410 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1016.410 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[7]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[7]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:271]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:271]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:272]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:272]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:273]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:273]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:274]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc:274]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/Basys-3-top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1016.410 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 56 Warnings, 56 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:58 . Memory (MB): peak = 1016.410 ; gain = 0.000
+design_1
+Vivado% --------------------------------------------------------------------------------------------------------
+invalid command name "--------------------------------------------------------------------------------------------------------"
+Vivado% # implémentation (placement et routage)
+Vivado% set systemTime [clock seconds]
+1599165265
+Vivado% puts "Il est presentement : [clock format $systemTime -format %H:%M:%S]"
+Il est presentement : 16:34:25
+Vivado% #opt_design
+Vivado% place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1016.410 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 4010c9c7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1016.410 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1269.004 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 4010c9c7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 106054f7f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 106054f7f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1269.004 ; gain = 252.594
+Phase 1 Placer Initialization | Checksum: 106054f7f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 106054f7f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 2.2 Global Placement Core
+WARNING: [Place 46-29] place_design is not in timing mode. Skip physical synthesis in placer
+Phase 2.2 Global Placement Core | Checksum: c34c74ea
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1269.004 ; gain = 252.594
+Phase 2 Global Placement | Checksum: c34c74ea
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: c34c74ea
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: a49423cd
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 11266b912
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 11266b912
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 14b7bd2af
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 14b7bd2af
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 14b7bd2af
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+Phase 3 Detail Placement | Checksum: 14b7bd2af
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+Phase 4.1 Post Commit Optimization | Checksum: 14b7bd2af
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 14b7bd2af
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 14b7bd2af
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1269.004 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 14b7bd2af
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 14b7bd2af
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+Ending Placer Task | Checksum: 6234035f
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.004 ; gain = 252.594
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1269.004 ; gain = 252.594
+Vivado% route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 55423bbe ConstDB: 0 ShapeSum: cf1c7a1 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 10f51297e
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 1319.016 ; gain = 50.012
+Post Restoration Checksum: NetGraph: c51b072e NumContArr: 4a362250 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 10f51297e
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 1326.824 ; gain = 57.820
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 10f51297e
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 1326.824 ; gain = 57.820
+ Number of Nodes with overlaps = 0
+Phase 2 Router Initialization | Checksum: 10c5ea51d
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 1329.313 ; gain = 60.309
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 6
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 6
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 12922def0
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.512 ; gain = 61.508
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 0
+Phase 4.1 Global Iteration 0 | Checksum: a6435d9f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.512 ; gain = 61.508
+Phase 4 Rip-up And Reroute | Checksum: a6435d9f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.512 ; gain = 61.508
+
+Phase 5 Delay and Skew Optimization
+Phase 5 Delay and Skew Optimization | Checksum: a6435d9f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.512 ; gain = 61.508
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+Phase 6.1 Hold Fix Iter | Checksum: a6435d9f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.512 ; gain = 61.508
+Phase 6 Post Hold Fix | Checksum: a6435d9f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.512 ; gain = 61.508
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.004943 %
+  Global Horizontal Routing Utilization  = 0.00208225 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 16.2162%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 16.2162%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 2.94118%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 2.94118%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: a6435d9f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.512 ; gain = 61.508
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: a6435d9f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.563 ; gain = 63.559
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: a6435d9f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.563 ; gain = 63.559
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:26 . Memory (MB): peak = 1332.563 ; gain = 63.559
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 1332.563 ; gain = 63.559
+Vivado% # programmation du FPGA
+Vivado% open_hw_manager
+Vivado% connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 13 2020-21:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 1347.180 ; gain = 14.617
+localhost:3121
+Vivado% get_hw_targets
+localhost:3121/xilinx_tcf/Digilent/210183ACA32EA
+Vivado% open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACA32EA
+Vivado% current_hw_device [get_hw_devices xc7a35t_0]
+xc7a35t_0
+Vivado% set_property PROGRAM.FILE {basys3-top.bit} [get_hw_devices xc7a35t_0]
+ERROR: [Labtools 27-2149] File basys3-top.bit not found. Check file name and file permissions.
+
+Vivado% program_hw_devices [get_hw_devices xc7a35t_0]
+ERROR: [Labtools 27-2151] No bitstream specified to program device xc7a35t_0. Create hw_bitstream and assign it to this device prior to calling this command.
+
+Vivado% disconnect_hw_server
+Vivado% # génération du fichier de configuration
+Vivado% puts "J'ai commence a $montic"
+J'ai commence a 16:32:03
+Vivado% set systemTime [clock seconds]
+1599165555
+Vivado% puts "Il est presentement : [clock format $systemTime -format %H:%M:%S]"
+Il est presentement : 16:39:15
+Vivado% write_bitstream -force basys3-top.bit
+Command: write_bitstream -force basys3-top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./basys3-top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-186] 'C:/Users/Pierre/Documents/GitHub/inf3500/trimestre-202003/exemples/synthese-implementation/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Thu Sep  3 16:39:37 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1763.906 ; gain = 416.535
+basys3-top.bit
+Vivado% # programmation du FPGA
+Vivado% open_hw_manager
+Vivado% connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 13 2020-21:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 1763.906 ; gain = 0.000
+localhost:3121
+Vivado% get_hw_targets
+localhost:3121/xilinx_tcf/Digilent/210183ACA32EA
+Vivado% open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACA32EA
+Vivado% current_hw_device [get_hw_devices xc7a35t_0]
+xc7a35t_0
+Vivado% set_property PROGRAM.FILE {basys3-top.bit} [get_hw_devices xc7a35t_0]
+Vivado% program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+Vivado% disconnect_hw_server
+Vivado% exit
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  3 17:12:18 2020...

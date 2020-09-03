@@ -26,6 +26,18 @@ architecture arch of basys3_top_exemples is
 
 begin
         
-    led(0) <= sw(1) xor sw(0);
+-- A3, A2, A1, A0 == sw(3), sw(2), sw(1), sw(0)
+    
+    
+-- pair : led(0)
+led(0) <= not(sw(0));
+
+-- divpar3 : led(1)
+led(1) <= (not(sw(3)) and not(sw(2)) and not(sw(1)) and not(sw(0)))
+    or (not(sw(3)) and not(sw(2)) and sw(1) and sw(0))
+    or (not(sw(3)) and sw(2) and sw(1) and not(sw(0)))
+    or (sw(3) and not(sw(2)) and not(sw(1)) and sw(0))
+    or (sw(3) and sw(2) and not(sw(1)) and not(sw(0)))
+    or (sw(3) and sw(2) and sw(1)and sw(0));
     
 end arch;
