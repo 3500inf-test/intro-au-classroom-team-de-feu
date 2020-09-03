@@ -5,7 +5,7 @@
 
 # --------------------------------------------------------------------------------------------------------
 # Choisir le réperoire de travail
-cd C:\Users\Pierre\Desktop\Nextcloud-GIGL\enseignement\INF3500\GitHub\inf3500\trimestre-202003\exemples\synthese-implementation
+cd C:\Users\Pierre\Documents\GitHub\inf3500\trimestre-202003\exemples\synthese-implementation
 # Lancer Vivado
 C:\Xilinx\Vivado\2020.1\bin\vivado -mode tcl
 
